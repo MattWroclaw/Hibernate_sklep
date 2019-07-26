@@ -9,6 +9,7 @@ public class RozwiazanieZad3 {
         Adres adres3 = new Adres("Wiejska", "2a", "23", "86-541", "Sopot");
         Adres adres4 = new Adres("Polnocna", "5", "3", "83-131", "Gdynia");
         Adres adres5 = new Adres("Grunwaldzka", "3", "16", "80-125", "Rewa");
+
         Klient klient1 = new Klient("Jan", "Niezbedny", "123456789", adres1);
         Klient klient2 = new Klient("Adam", "Nowy", "123456781", adres2);
         Klient klient3 = new Klient("Pawel", "Adamski", "123456782", adres3);
@@ -18,8 +19,10 @@ public class RozwiazanieZad3 {
         KategoriaProduktu kategoria1 = new KategoriaProduktu("ksiazka techniczna");
         KategoriaProduktu kategoria2 = new KategoriaProduktu("ksiazka fantastyczna");
         KategoriaProduktu kategoria3 = new KategoriaProduktu("ksiazka sensacyjna");
+
         Producent producent1 = new Producent("Helion");
         Producent producent2 = new Producent("PWN");
+
         Produkt produkt1 = new Produkt("ksazka techniczna1", 30.0, producent1, kategoria1);
         Produkt produkt2 = new Produkt("ksazka techniczna2", 130.0, producent1, kategoria1);
         Produkt produkt3 = new Produkt("ksazka techniczna3", 50.0, producent2, kategoria1);
@@ -30,27 +33,49 @@ public class RozwiazanieZad3 {
         Produkt produkt8 = new Produkt("ksazka sensacyjna1", 32.0, producent1, kategoria3);
         Produkt produkt9 = new Produkt("ksazka sensacyjna2", 40.0, producent1, kategoria3);
         Produkt produkt10 = new Produkt("ksazka sensacyjna3", 30.0, producent1, kategoria3);
-/*        klient1.getProdukty().add(produkt1);
+
+        klient1.getProdukty().add(produkt1);
         klient1.getProdukty().add(produkt2);
         klient1.getProdukty().add(produkt3);
         klient1.getProdukty().add(produkt4);
 
-        dao.newObject(klient1);
-        dao.newObject(klient2);
-        dao.newObject(klient3);
-        dao.newObject(klient4);
-        dao.newObject(klient5);*/
-dao.newObject(producent1);
+        klient2.getProdukty().add(produkt5);
+        klient2.getProdukty().add(produkt6);
+        klient2.getProdukty().add(produkt7);
+
+        klient3.getProdukty().add(produkt8);
+        klient3.getProdukty().add(produkt9);
+        klient3.getProdukty().add(produkt10);
+        klient3.getProdukty().add(produkt3);
+
+        klient4.getProdukty().add(produkt4);
+
+        klient5.getProdukty().add(produkt1);
+        klient5.getProdukty().add(produkt2);
+        klient5.getProdukty().add(produkt3);
+
+        dao.newObject(producent1);
+        dao.newObject(producent2);
+
         dao.newObject(kategoria1);
+        dao.newObject(kategoria2);
+        dao.newObject(kategoria3);
+
         dao.newObject(produkt1);
         dao.newObject(produkt2);
-        /*dao.newObject(produkt3);
+        dao.newObject(produkt3);
         dao.newObject(produkt4);
         dao.newObject(produkt5);
         dao.newObject(produkt6);
         dao.newObject(produkt7);
         dao.newObject(produkt8);
         dao.newObject(produkt9);
-        dao.newObject(produkt10);*/
+        dao.newObject(produkt10);
+
+        dao.newObject(klient1);
+        dao.newObject(klient2);
+        dao.newObject(klient3);
+        dao.newObject(klient4);
+        dao.newObject(klient5);
     }
 }

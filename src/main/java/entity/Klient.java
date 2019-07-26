@@ -19,7 +19,7 @@ public class Klient {
     private String telefon;
     @OneToOne(mappedBy = "klient", cascade = CascadeType.PERSIST)
     private Adres adres;
-    @ManyToMany(cascade = CascadeType.PERSIST)
+    @ManyToMany
     @JoinTable(name = "Klinet_produkt",
             joinColumns = @JoinColumn(name = "idklineta"),
             inverseJoinColumns = @JoinColumn(name = "idproduktu"))
@@ -69,8 +69,8 @@ public class Klient {
     }
 
     public List<Produkt> getProdukty() {
-        if(produkty==null){
-            return new ArrayList<Produkt>();
+        if (produkty == null) {
+            produkty = new ArrayList<Produkt>();
         }
         return produkty;
     }
