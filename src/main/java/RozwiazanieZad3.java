@@ -10,11 +10,11 @@ public class RozwiazanieZad3 {
         Adres adres4 = new Adres("Polnocna", "5", "3", "83-131", "Gdynia");
         Adres adres5 = new Adres("Grunwaldzka", "3", "16", "80-125", "Rewa");
 
-        Klient klient1 = new Klient("Jan", "Niezbedny", "123456789", adres1);
-        Klient klient2 = new Klient("Adam", "Nowy", "123456781", adres2);
-        Klient klient3 = new Klient("Pawel", "Adamski", "123456782", adres3);
-        Klient klient4 = new Klient("Anna", "Kowalska", "123456222", adres4);
-        Klient klient5 = new Klient("Kasia", "Nowak", "123453333", adres5);
+        Klient klient1 = new Klient("Jan", "Niezbedny", "123456789");
+        Klient klient2 = new Klient("Adam", "Nowy", "123456781");
+        Klient klient3 = new Klient("Pawel", "Adamski", "123456782");
+        Klient klient4 = new Klient("Anna", "Kowalska", "123456222");
+        Klient klient5 = new Klient("Kasia", "Nowak", "123453333");
 
         KategoriaProduktu kategoria1 = new KategoriaProduktu("ksiazka techniczna");
         KategoriaProduktu kategoria2 = new KategoriaProduktu("ksiazka fantastyczna");
@@ -33,6 +33,11 @@ public class RozwiazanieZad3 {
         Produkt produkt8 = new Produkt("ksazka sensacyjna1", 32.0, producent1, kategoria3);
         Produkt produkt9 = new Produkt("ksazka sensacyjna2", 40.0, producent1, kategoria3);
         Produkt produkt10 = new Produkt("ksazka sensacyjna3", 30.0, producent1, kategoria3);
+        adres1.setKlient(klient1);
+        adres2.setKlient(klient2);
+        adres3.setKlient(klient3);
+        adres4.setKlient(klient4);
+        adres5.setKlient(klient5);
 
         klient1.getProdukty().add(produkt1);
         klient1.getProdukty().add(produkt2);
@@ -77,5 +82,11 @@ public class RozwiazanieZad3 {
         dao.newObject(klient3);
         dao.newObject(klient4);
         dao.newObject(klient5);
+
+        dao.newObject(adres1);
+        dao.newObject(adres2);
+        dao.newObject(adres3);
+        dao.newObject(adres4);
+        dao.newObject(adres5);
     }
 }

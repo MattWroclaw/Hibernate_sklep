@@ -76,10 +76,9 @@ public class Klient {
     }
 
 
-    public Klient(String imie, String nazwisko, String telefon, Adres adres) {
+    public Klient(String imie, String nazwisko, String telefon) {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.telefon = telefon;
-        this.adres = adres;
     }
 }
