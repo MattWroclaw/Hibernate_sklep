@@ -14,12 +14,16 @@ public class Produkt {
     private String nazwa;
     @Column
     private Double cena;
+
     @ManyToOne
     @JoinColumn(name = "id_producenta")
     private Producent producent;
+
     @ManyToOne
     @JoinColumn(name = "id_kategorii")
     private KategoriaProduktu kategoriaProduktu;
+
+
     @ManyToMany(mappedBy = "produkty")
     private List<Klient> klienci;
 
@@ -35,6 +39,8 @@ public class Produkt {
     }
 
     public String getNazwa() {
+
+
         return nazwa;
     }
 

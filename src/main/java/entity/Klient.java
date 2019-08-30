@@ -19,6 +19,7 @@ public class Klient {
     private String telefon;
     @OneToOne(mappedBy = "klient", cascade = CascadeType.PERSIST)
     private Adres adres;
+
     @ManyToMany
     @JoinTable(name = "Klinet_produkt",
             joinColumns = @JoinColumn(name = "idklineta"),

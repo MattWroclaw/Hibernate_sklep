@@ -88,5 +88,12 @@ public class RozwiazanieZad3 {
         dao.newObject(adres3);
         dao.newObject(adres4);
         dao.newObject(adres5);
+
+        Producent byId = dao.findById(1L, Producent.class);
+        System.out.println("drukowanie: obiekt Producent "+byId.getNazwa());
+        System.out.println("drukowanie: obiekt Producent "+byId.toString());
+
+        dao.delete(adres1);
+
     }
 }

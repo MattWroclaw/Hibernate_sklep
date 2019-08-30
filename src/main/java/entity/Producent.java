@@ -37,4 +37,13 @@ public class Producent {
     public Producent(String nazwa) {
         this.nazwa = nazwa;
     }
+
+    @Override
+    public String toString() {
+        return "Producent{" +
+                "id=" + id +
+                ", nazwa='" + nazwa + '\'' +
+
+                '}';
+    }
 }

@@ -8,6 +8,14 @@ public class DAO {
         session.flush();
         session.close();
     }
+    public <T> void nazwa(T oj){
+        System.out.println("nic");
+    }
+
+    public <T>T nawa(T k){
+         return k;
+    }
+
 
     public <T> T findById(Long id, Class<T> typeClass) {
         Session session = HibernateUtil.getSessionFactory().openSession();
@@ -24,6 +32,7 @@ public class DAO {
         session.close();
         return object;
     }
+
 
     public <T> void delete(T object) {
         Session session = HibernateUtil.getSessionFactory().openSession();
